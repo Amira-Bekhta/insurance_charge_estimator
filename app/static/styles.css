@@ -5,7 +5,8 @@ body{
     align-items: center;
     flex-wrap: wrap;
     font-family: 'Calibri', sans-serif;
-    background-color: azure;
+    background-color: aliceblue;
+    gap: 0.5em;
 }
 
 h2 {
@@ -24,7 +25,20 @@ fieldset {
     margin: 0; 
 }
 input{
-    border-radius: 7px;
+    border-color: gainsboro;
+    border-width: 0.04em;
+    border-style: solid;
+    
 }
 
+input[type="number"],
+input[type="select"]{
+    width: 40em;
+    height: 1.5em;
+}
 
+input[type="submit"]{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
