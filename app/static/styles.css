@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Calibri', sans-serif;
+    background-color: azure;
+}
+
+h2 {
+    margin-right: auto; 
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.02em;
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0; 
+}
+input{
+    border-radius: 7px;
+}
+
+

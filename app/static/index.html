@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance price estimator</title>
+    <link rel="icon" type="image/x-icon" href="pic.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>MedIns</h2>
+    <h3>Welcome to MedIns insurance charge estimation tool!</h3>
+    <strong>Please fill in the form with your information and press the button below to estimate charges!</strong>
+    <form action="">
+        <label for="age">Age:</label>
+        <input type="number" placeholder="Age" id="age" name="age" min="18" required>
+        <fieldset>
+            <legend>Sex:</legend>
+            <label for="male">Male</label>
+            <input type="radio" name="sex" id="male" required>
+            <label for="female">Female</label>
+            <input type="radio" name="sex" id="female" required>
+        </fieldset>
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" min="0" required>
+        <label for="children">Number of children:</label>
+        <input type="number" id="children" name="children" required>
+        <fieldset>
+            <legend>Smoking</legend>
+            <label for="smoking">Yes</label>
+            <input type="radio" name="smoker" id="smoking" required>
+            <label for="Nsmoking">No</label>
+            <input type="radio" name="smoker" id="Nsmoking" required> <br>
+        </fieldset>
+        <label for="choices">Choose an option:</label>
+        <select id="choices" name="choices" required>
+            <option value="">--Select an option--</option>
+            <option value="NorthEast">North east</option>
+            <option value="NorthWest">North west</option>
+            <option value="SouthEast">South east</option>
+            <option value="SouthWest">South west</option>
+        </select> <br> 
+        <input type="submit" value="Estimate charges">
+    </form>
+    <div id="res">
+        <h2>The estimated insurance charge is:</h2>
+        <h3>0.0$</h3>
+    </div>
+</body>
+</html>
