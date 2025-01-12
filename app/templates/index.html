@@ -7,30 +7,77 @@
     <link rel="icon" type="image/x-icon" href="pic.png">
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Calibri', sans-serif;
+    background-color: aliceblue;
+    gap: 0.25em;
+}
+
+h2 {
+    margin-right: auto; 
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.02em;
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0; 
+}
+input{
+    border-color: gainsboro;
+    border-width: 0.04em;
+    border-style: solid;
+    
+}
+
+input[type="number"],
+input[type="select"]{
+    width: 40em;
+    height: 1.25em;
+}
+
+input[type="submit"]{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+</style>
 <body>
     <h2>MedIns</h2>
     <h3>Welcome to MedIns insurance charge estimation tool!</h3>
     <strong>Please fill in the form with your information and press the button below to estimate charges!</strong>
-    <form action="">
+    <form method="post" id="form">
         <label for="age">Age:</label>
         <input type="number" placeholder="Age" id="age" name="age" min="18" required>
         <fieldset>
             <legend>Sex:</legend>
             <label for="male">Male</label>
-            <input type="radio" name="sex" id="male" required>
+            <input type="radio" name="sex" id="male" value="male" required>
             <label for="female">Female</label>
-            <input type="radio" name="sex" id="female" required>
+            <input type="radio" name="sex" id="female" value="female" required>
         </fieldset>
         <label for="bmi">BMI:</label>
-        <input type="number" id="bmi" name="bmi" min="0" required>
+        <input type="number" id="bmi" name="bmi" min="0" step="any" required>
         <label for="children">Number of children:</label>
         <input type="number" id="children" name="children" required>
         <fieldset>
             <legend>Smoking</legend>
             <label for="smoking">Yes</label>
-            <input type="radio" name="smoker" id="smoking" required>
+            <input type="radio" name="smoker" id="smoking" value="yes" required>
             <label for="Nsmoking">No</label>
-            <input type="radio" name="smoker" id="Nsmoking" required> <br>
+            <input type="radio" name="smoker" id="Nsmoking" value="no" required> <br>
         </fieldset>
         <label for="choices">Choose an option:</label>
         <select id="choices" name="choices" required>
@@ -43,8 +90,10 @@
         <input type="submit" value="Estimate charges">
     </form>
     <div id="res">
-        <h2>The estimated insurance charge is:</h2>
-        <h3>0.0$</h3>
+        {% if estimation %}
+        <h2>Your estimated insurance charge is:</h2>
+        <p>{{ estimation }}$</p>
+        {% endif %}
     </div>
 </body>
 </html>
