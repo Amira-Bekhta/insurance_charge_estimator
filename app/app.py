@@ -37,7 +37,7 @@ def home():
             region = 3
 
         pred = model.predict([[age, sex, bmi, children, smoker, region]])
-        estimation = pred[0]
+        estimation = round(pred[0], 2)
 
     return render_template("index.html", estimation=estimation)
 
