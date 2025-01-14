@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import joblib
+import os
 
 model = joblib.load("model/model.pkl")
 
