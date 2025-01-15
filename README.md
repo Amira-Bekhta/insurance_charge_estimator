@@ -29,7 +29,7 @@ This project is one in which I have built a machine learning model that helps es
 ## Installation 📦
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Amira-Bekhta/Spam_detector 
+   git clone https://github.com/Amira-Bekhta/insurance_charge_estimator/
    ```
 
 2. Install the required libraries:
